@@ -12,9 +12,7 @@
 	margin-top:50%;
 	margin-left:10%;
 	border-radius:20px;
-	background-image: url("/logo512.png");
-	background-size:400px;
-	background-position:absolute:
+	background:linear-gradient(84deg, white, yellow);
 }
 
 
@@ -36,4 +34,15 @@ button:hover{
 
 
 	
+}
+
+.dateNow{
+	font-size: 1.5em;
+	border: 1px solid blue;
+	width: 300px;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
+	margin-left: 50px;
+	border-radius:20px;
 }

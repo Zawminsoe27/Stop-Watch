@@ -3,6 +3,28 @@ let startButtonTag = document.querySelector(".startButton");
 let pauseButtonTag = document.querySelector(".pauseButton");
 let continueButtonTag = document.querySelector(".continueButton");
 let resetButtonTag = document.querySelector(".resetButton");
+let dateNow = document.getElementsByClassName("dateNow")[0];
+
+let date = new Date()
+let year = date.getFullYear()
+let month = date.getMonth() +1 ;
+let day = date.getDate();
+
+let time = "Today : " + day + " " +month+" " + year
+
+
+
+dateNow.textContent = time;
+
+function twinkle() {
+	if(dateNow.style.disply === "block"){
+		dateNow.style.disply = "none"
+	}
+	
+	if(dateNow.style.disply === "none") {
+		dateNow.style.disply = "block"
+	}
+}
 
 let seconds = 0;
 let minutes = 0;
