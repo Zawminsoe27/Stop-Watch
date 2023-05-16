@@ -1,0 +1,39 @@
+
+@media(max-width: 580px){
+	.mainDiv{
+	box-sizing: border-box;
+}
+
+.watchBody{
+	border: 1px solid blue;
+	height:250px;
+	width:400px;
+	box-sizing: border-box;
+	margin-top:50%;
+	margin-left:10%;
+	border-radius:20px;
+	background-image: url("/logo512.png");
+	background-size:400px;
+	background-position:absolute:
+}
+
+
+.stopwatch{
+	color: red;
+	font-size:50px;
+	margin-bottom: 5px;
+	margin-top:15%;
+}
+
+button{
+	margin-top:7%;
+	margin-left:1%;
+}
+
+button:hover{
+	width:30%
+}
+
+
+	
+}
