@@ -4,27 +4,50 @@ let pauseButtonTag = document.querySelector(".pauseButton");
 let continueButtonTag = document.querySelector(".continueButton");
 let resetButtonTag = document.querySelector(".resetButton");
 let dateNow = document.getElementsByClassName("dateNow")[0];
+let clockNow = document.getElementsByClassName("clock")[0]
+
 
 let date = new Date()
 let year = date.getFullYear()
 let month = date.getMonth() +1 ;
 let day = date.getDate();
+let hour = date.getHours();
+let minute = date.getMinutes();
+let second1 = date.getSeconds()
 
-let time = "Today : " + day + " " +month+" " + year
+
+
+let time = "Today : " + day + "/ " +month+" /" + year
 
 
 
 dateNow.textContent = time;
 
-function twinkle() {
-	if(dateNow.style.disply === "block"){
-		dateNow.style.disply = "none"
+function clockOfNow() {
+	
+	let secText = second1 <10 ? "0" + second1.toString() : second1
+	let minText = minute < 10 ? "0" + minute.toString() :minute;
+	let houText = hour <10 ? "0" + minute.toString() :
+	hour;
+	let AmPm = houText < 12 ? "AM" : "PM";
+
+	let clock = houText + " : " +minText+ " : " + secText +
+	" " + AmPm
+	
+	second1+=1
+	if(second1 === 60){
+		second1=0;
+		minute+=1
 	}
 	
-	if(dateNow.style.disply === "none") {
-		dateNow.style.disply = "block"
+	if(minute===60){
+		minute =0;
+		hour +=1;
 	}
+	clockNow.textContent = clock
 }
+
+setInterval(clockOfNow,1000)
 
 let seconds = 0;
 let minutes = 0;

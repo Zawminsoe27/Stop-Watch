@@ -1,5 +1,9 @@
+@font-face{
+	font-family: 'Digital';
+	src: url('/font/Orbitron-Regular.ttf')
+}
 
-@media(max-width: 580px){
+
 	.mainDiv{
 	box-sizing: border-box;
 }
@@ -12,7 +16,9 @@
 	margin-top:50%;
 	margin-left:10%;
 	border-radius:20px;
-	background:linear-gradient(84deg, white, yellow);
+	background:linear-gradient(84deg, lightgreen, yellow,white);
+	z-index: 1;
+	position: relative;
 }
 
 
@@ -21,6 +27,9 @@
 	font-size:50px;
 	margin-bottom: 5px;
 	margin-top:15%;
+	font-family: Times;
+	
+	
 }
 
 button{
@@ -33,9 +42,6 @@ button:hover{
 }
 
 
-	
-}
-
 .dateNow{
 	font-size: 1.5em;
 	border: 1px solid blue;
@@ -45,4 +51,18 @@ button:hover{
 	justify-items: center;
 	margin-left: 50px;
 	border-radius:20px;
+}
+
+.clock{
+	font-size: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	margin-left: 160px;
+	margin-top:33px;
+	border-radius: 10px;
+	border:1px solid red;
+	width: 180px;
 }
