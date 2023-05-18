@@ -16,7 +16,6 @@ let minute = date.getMinutes();
 let second1 = date.getSeconds()
 
 
-
 let time = "Today : " + day + "/ " +month+" /" + year
 
 
@@ -27,11 +26,11 @@ function clockOfNow() {
 	
 	let secText = second1 <10 ? "0" + second1.toString() : second1
 	let minText = minute < 10 ? "0" + minute.toString() :minute;
-	let houText = hour <10 ? "0" + minute.toString() :
-	hour;
-	let AmPm = houText < 12 ? "AM" : "PM";
+	let hourText1 = hour <10 ? "0" + hour.toString() : hour;
+	
+	let AmPm = hour < 12 ? "AM" : "PM";
 
-	let clock = houText + " : " +minText+ " : " + secText +
+	let clock = hourText1 + " : " +minText+ " : " + secText +
 	" " + AmPm
 	
 	second1+=1
